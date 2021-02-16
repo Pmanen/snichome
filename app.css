@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+html, body{
+    margin: 0px;
+    height: 100%;
+}
+
+header {
+    position: relative;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: #f3f8fa;
+}
+
+header video {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container-fluid{
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: darkblue;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+#titel {
+    padding: 10% 0 0 20%;
+    color: white;
+    font-family: 'Mukta', 'Raleway', sans-serif;
+}
+
+.conf-buttons {
+    padding: 50px 0 150px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.linkicon {
+    padding-bottom: 2px;
+}
+
+/* From Codepen */
+
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 350px;
+  border: 2px solid #BFC0C0;
+  margin: 5px 5px 5px 5px;
+  color: #BFC0C0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: left;
+  overflow: hidden;
+  padding-bottom: 5px;
+
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button a {
+  color: #BFC0C0;
+  text-decoration: none;
+  letter-spacing: 1px;
+  position: relative;
+  transition: all .35s ease-Out;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  left: -350px;
+  background: #BFC0C0;
+  position: absolute;
+  transition: all .35s ease-Out;
+  bottom: 0;
+}
+
+.button:hover .slide {
+  left: 0;
+}
+
+.button:hover a {
+  color: #2D3142;
+}
+
+/* end codepen */
+
+
+.primary .slide {
+    background: #2D2E83;
+}
+
+.primary:hover a{
+    color: #D5A361;
+}
+
+.tertiary {
+    width: 250px;
+}
+
+
+/* media queries */
+@media (max-width: 1200px){
+    .conf-buttons {
+        display: none;
+    }
+}
